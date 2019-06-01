@@ -3,7 +3,7 @@
 {
 	"name": "Node.js (latest LTS)",
 	"dockerFile": "Dockerfile",
-	"appPort": 3000,
+	"appPort": [3000,6006],
 	"extensions": [
 		"dbaeumer.vscode-eslint"
 	]
