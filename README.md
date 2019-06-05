@@ -8,3 +8,6 @@ VSCode Insiderで使うRemote -container-用の開発スターターセット
 
 ・NuxtContainer
 Nuxtを動かすセット。Storybookも入れてあるのでそこそこモダンな環境かと
+
+・MLContainer
+Pytorchを動かす。ただGPUを前提にしてないのでめっちゃ遅い。注意。
