@@ -5,3 +5,6 @@ VSCode Insiderで使うRemote -container-用の開発スターターセット
 
 ・ElixirContainer
 文字通りelixir向けのやつ。ディレクトリの中身をコピペしたら動くと思う
+
+・NuxtContainer
+Nuxtを動かすセット。Storybookも入れてあるのでそこそこモダンな環境かと
