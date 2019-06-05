@@ -5,12 +5,12 @@
 </template>
 
 <script>
-import logo from '../../atoms/logo/logo.vue'
+import logo from "../../atoms/logo/logo.vue";
 export default {
   components: {
     logo
   }
-}
+};
 </script>
 
 <style scoped>
