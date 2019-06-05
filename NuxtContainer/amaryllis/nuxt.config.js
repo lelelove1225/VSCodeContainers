@@ -1,7 +1,7 @@
-import pkg from './package'
+import pkg from "./package";
 
 export default {
-  mode: 'universal',
+  mode: "universal",
 
   /*
    ** Headers of the page
@@ -9,17 +9,17 @@ export default {
   head: {
     title: pkg.name,
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { hid: "description", name: "description", content: pkg.description }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
 
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: { color: "#fff" },
 
   /*
    ** Global CSS
@@ -36,7 +36,7 @@ export default {
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    "@nuxtjs/axios"
   ],
   /*
    ** Axios module configuration
@@ -53,15 +53,17 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {
+      const path = require("path");
+      config.resolve.alias["@components"] = path.join(__dirname, "components");
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
-          enforce: 'pre',
+          enforce: "pre",
           test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
+          loader: "eslint-loader",
           exclude: /(node_modules)/
-        })
+        });
       }
     }
   }
-}
+};
