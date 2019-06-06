@@ -53,8 +53,6 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {
-      const path = require("path");
-      config.resolve.alias["@components"] = path.join(__dirname, "components");
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
