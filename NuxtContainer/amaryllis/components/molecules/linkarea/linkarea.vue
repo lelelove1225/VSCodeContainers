@@ -1,6 +1,6 @@
 <template>
   <div>
-    <linkbutton :image_src="imageSrc" />
+    <linkbutton :image-src="imageSrc" />
   </div>
 </template>
 
@@ -12,7 +12,8 @@ export default {
   },
   data() {
     return {
-      imageSrc: ""
+      imageSrc:
+        "dummy"
     };
   }
 };
