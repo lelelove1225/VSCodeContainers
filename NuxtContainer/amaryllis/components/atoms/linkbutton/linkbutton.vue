@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img :src="imgSrc" @click="onLinkClick" />
+    <img :src="img_src" @click="onLinkClick" />
   </div>
 </template>
 <script>
@@ -17,7 +17,7 @@ export default {
   },
   data() {
     return {
-      imgSrc: this.imageSrc,
+      img_src: this.imageSrc,
       url: this.linkUrl
     };
   },
