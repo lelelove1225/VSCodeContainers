@@ -1,6 +1,6 @@
 <template>
   <div>
-    <linkbutton :image-src="imageSrc" :link-url="linkUrl" />
+    <linkbutton :image-src="imageSrc" :link-url="linkUrl"/>
   </div>
 </template>
 
