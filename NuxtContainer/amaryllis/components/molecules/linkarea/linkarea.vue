@@ -1,6 +1,6 @@
 <template>
   <div>
-    <linkbutton :image-src="imageSrc" />
+    <linkbutton :image-src="imageSrc" :link-url="linkUrl"/>
   </div>
 </template>
 
@@ -12,7 +12,8 @@ export default {
   },
   data() {
     return {
-      imageSrc: ""
+      imageSrc: require("../../../assets/icon/GitHub-Mark-Light-120px-plus.png"),
+      linkUrl: "https://github.com/lelelove1225"
     };
   }
 };
