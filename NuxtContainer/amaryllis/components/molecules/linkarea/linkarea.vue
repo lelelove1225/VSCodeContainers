@@ -1,6 +1,6 @@
 <template>
   <div>
-    <linkbutton :image-src="imageSrc" :link-url="linkUrl"/>
+    <linkbutton :image-src="imageSrc" :link-url="linkUrl" />
   </div>
 </template>
 
@@ -12,8 +12,16 @@ export default {
   },
   data() {
     return {
-      imageSrc: require("../../../assets/icon/GitHub-Mark-Light-120px-plus.png"),
-      linkUrl: "https://github.com/lelelove1225"
+      links: [
+        {
+          imageSrc: require("../../../assets/icon/GitHub-Mark-Light-120px-plus.png"),
+          linkUrl: "https://github.com/lelelove1225"
+        },
+        {
+          imageSrc: require("../../../assets/icon/GitHub-Mark-Light-120px-plus.png"),
+          linkUrl: "https://github.com/lelelove1225"
+        }
+      ]
     };
   }
 };
@@ -21,7 +29,5 @@ export default {
 
 <style scoped>
 div {
-  background-color: maroon;
-  padding-top: 1.5vh;
 }
 </style>
