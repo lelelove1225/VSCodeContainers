@@ -1,5 +1,5 @@
 # VSCodeContainers
-VSCode Insiderで使うRemote -container-用の開発スターターセット
+VSCodeで使うRemote -container-用の開発スターターセット
 
 手順はWIP。Remoteの使い方記事を見るといいかも。
 
