@@ -36,15 +36,18 @@ export default {
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    "@nuxtjs/axios"
+    "@nuxtjs/axios",
+    "@nuxtjs/proxy"
   ],
   /*
    ** Axios module configuration
    */
   axios: {
-    // See https://github.com/nuxt-community/axios-module#options
+    proxy: true // Can be also an object with default options
   },
-
+  proxy: {
+    "/news": "https://news.yahoo.co.jp"
+  },
   /*
    ** Build configuration
    */
