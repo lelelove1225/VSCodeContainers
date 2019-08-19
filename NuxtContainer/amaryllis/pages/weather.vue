@@ -34,7 +34,8 @@ export default {
         temp: 0,
         weather: "",
         icon: ""
-      }
+      },
+      weatherValueList: []
     };
   },
   mounted() {
@@ -43,39 +44,35 @@ export default {
 
   methods: {
     getWeather() {
-      /// <img src="http://openweathermap.org/img/w/" + {{}}
-      const API_KEY = "";
       const city = "Tokyo";
       const url =
         "http://api.openweathermap.org/data/2.5/forecast?q=" +
         city +
         ",jp&units=metric&APPID=" +
-        API_KEY;
+        process.env.WEATHER_API_KEY;
       // eslint-disable-next-line no-console
+      console.log(process.env.WEATHER_API_KEY);
       axios.get(url).then(response => {
-        // eslint-disable-next-line no-console
-        console.log(response);
         const { list } = response.data;
-        const target = list[0];
-        // eslint-disable-next-line no-console
-        this.weatherValue.date = new Date(target.dt_txt);
-        this.weatherValue.temp = target.main.temp;
-        this.weatherValue.icon =
-          // eslint-disable-next-line no-template-curly-in-string
-          `http://openweathermap.org/img/w/${target.weather[0].icon}.png`;
-        this.weatherValue.weather = target.weather[0].description;
-        // eslint-disable-next-line no-console
-        console.log(target);
         // eslint-disable-next-line no-console
         console.log(this.weatherValue);
-        // const icon = target.weather[0].icon;
-      });
-    },
-    getNews() {
-      const url = "https://news.yahoo.co.jp/pickup/computer/rss.xml";
-      axios.get(url).then(response => {
+        for (let i = 0; i < 4; i++) {
+          const weatherValue = {};
+          const target = list[i];
+          // eslint-disable-next-line no-console
+          console.log(target);
+          weatherValue.date = new Date(target.dt_txt);
+          weatherValue.temp = target.main.temp;
+          weatherValue.icon = `http://openweathermap.org/img/w/${
+            target.weather[0].icon
+          }.png`;
+          weatherValue.weather = target.weather[0].description;
+          // eslint-disable-next-line no-console
+          console.log(weatherValue);
+          this.weatherValueList.push(weatherValue);
+        }
         // eslint-disable-next-line no-console
-        console.log(response);
+        console.log(this.weatherValueList);
       });
     }
   }

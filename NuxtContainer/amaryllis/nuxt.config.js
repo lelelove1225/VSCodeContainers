@@ -1,5 +1,8 @@
 import pkg from "./package";
 
+require("dotenv").config();
+const { WEATHER_API_KEY } = process.env;
+
 export default {
   mode: "universal",
 
@@ -66,5 +69,8 @@ export default {
         });
       }
     }
+  },
+  env: {
+    WEATHER_API_KEY
   }
 };
