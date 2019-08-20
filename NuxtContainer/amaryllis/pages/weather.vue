@@ -64,7 +64,7 @@ export default {
           weatherValue.date = new Date(target.dt_txt);
           weatherValue.temp = target.main.temp;
           weatherValue.icon = `http://openweathermap.org/img/w/${
-            target.weather[i].icon
+            target.weather[0].icon
           }.png`;
           weatherValue.weather = target.weather[0].description;
           // eslint-disable-next-line no-console
