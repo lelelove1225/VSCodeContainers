@@ -17,6 +17,7 @@
     "@nuxtjs/axios": "^5.5.2",
     "@nuxtjs/dotenv": "^1.4.0",
     "cross-env": "^5.2.0",
+    "googleapis": "39",
     "nuxt": "^2.7.1"
   },
   "devDependencies": {
